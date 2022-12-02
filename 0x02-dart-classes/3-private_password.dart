@@ -4,10 +4,12 @@ class Password {
     this._password = password;
   }
   bool isValid() {
-    if (this._password.length > 6 && this._password.length <18 && this._password.contains(RegExp(r'^[a-zA-Z0]*$'))) {
-      if (this._password.contains(RegExp(r'\d'))) {
+    if (this._password.length > 6 && this._password.length < 18) {
+      if (this._password.contains(RegExp(r'[a-zA-Z]'))) {
+        if (this._password.contains(RegExp(r'\d'))) {
           return true;
         }
+      }
     }
     return false;
   }
