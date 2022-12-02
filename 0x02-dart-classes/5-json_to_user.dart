@@ -16,4 +16,11 @@ class User {
         age: userJson['age'],
         height: userJson['height']);
   }
+  String showName() {
+    return "Hello $name";
+  }
+
+  String toString() {
+    return "User(id : $id ,name: $name, age: $age, height: $height)";
+  }
 }
