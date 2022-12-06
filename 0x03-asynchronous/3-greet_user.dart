@@ -17,7 +17,7 @@ Future<String> loginUser() async{
   try {
     if (await checkCredentials()) {
       print("There is a user: true");
-      var user = greetUser();
+      var user = await greetUser();
       return 'Hello $user';
     }
     print("There is a user: false");
