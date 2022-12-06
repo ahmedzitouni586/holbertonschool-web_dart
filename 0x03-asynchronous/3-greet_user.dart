@@ -8,7 +8,7 @@ Future<String> greetUser() async{
     var jsonstr = jsonDecode(result);
     return jsonstr["username"];
   } catch (err) {
-    return "error caught: $err";
+    print("error caught: $err");
   }
   
 }
@@ -22,6 +22,6 @@ Future<String> loginUser() async{
     print("There is a user: false");
     return "Wrong credentials";
   } catch (err) {
-    return "error caught: $err";
+    print("error caught: $err");
   }
 }
